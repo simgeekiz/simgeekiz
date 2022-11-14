@@ -1,0 +1,89 @@
+$font-stack: "Raleway", sans-serif;
+$primary-color: #444;
+$blue-color: #0563bb;
+$theme-pink: #D94D4D;
+$theme-white: #f5f5f5;
+$theme-section-title: #45505b;
+$section-blue-dark: #0563bb;
+$about-black-blue: #3b434a;
+
+
+$theme-overlay: rgba(255, 255, 255, 0.3);
+$theme-overlay-dark: rgba(0, 0, 0, 0.4);
+
+// Social Icon Colors
+$twitter-blue: #1d9bf0;
+$linkedIn-blue: #0a66c2;
+$flickr-blue: #006dac;
+$github-codepen-white: #fff;
+$trello-blue: #026aa7;
+
+
+$layout-breakpoint-1366: 1366px;
+$layout-breakpoint-991: 991px;
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40% {
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -6px, 0);
+    }
+
+    70% {
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -4px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}

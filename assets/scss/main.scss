@@ -1,0 +1,49 @@
+// Template name is Impulse
+// Author: Simge Ekiz Basar
+
+@import 'config';
+@import 'hero';
+@import 'header';
+@import 'footer';
+@import 'sections';
+
+
+// General
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    // font-family: "Raleway", sans-serif;
+}
+
+.justify-content-left {
+    justify-content: left;
+}
+
+.justify-content-right {
+    justify-content: right;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        align-items: center;
+    }
+}

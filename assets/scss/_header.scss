@@ -1,0 +1,165 @@
+// # Navigation Menu
+// Desktop Navigation 
+
+%message-shared {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@mixin theme($theme: $theme-pink) {
+    color: $theme;
+}
+
+// # Header
+
+#header {
+    z-index: 997;
+    transition: all 0.5s;
+    height: 80px;
+    background: rgba(25, 28, 31, 0.8);
+
+    &.header-transparent {
+        background: transparent;
+    }
+
+    &.header-scrolled {
+        height: 60px;
+        background: rgba(25, 28, 31, 0.8);
+    }
+}
+
+
+.navbar {
+    padding: 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    li {
+        position: relative;
+        padding-bottom: 0;
+
+        &:hover {
+            >a {
+                @include theme;
+            }
+        }
+
+        a {
+            @extend %message-shared;
+
+            &:focus {
+                @extend %message-shared;
+            }
+
+            i {
+                font-size: 12px;
+                line-height: 0;
+                margin-left: 5px;
+
+                &:focus {
+                    font-size: 12px;
+                    line-height: 0;
+                    margin-left: 5px;
+                }
+            }
+
+            &:hover {
+                @include theme;
+            }
+        }
+
+        .active {
+            @include theme;
+
+            &:focus {
+                @include theme;
+            }
+        }
+    }
+
+    // Mobile Navigation
+    .mobile-nav-toggle {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+        line-height: 0;
+        transition: 0.5s;
+    }
+
+    &.navbar-mobile {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(36, 41, 46, 0.9);
+        transition: 0.3s;
+        z-index: 999;
+
+        .mobile-nav-toggle {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+
+        ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        a,
+        a:focus {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #3b434a;
+        }
+
+        a:hover,
+        .active,
+        li:hover>a {
+            @include theme;
+        }
+
+        .getstarted,
+        .getstarted:focus {
+            margin: 15px;
+        }
+    }
+
+    @media (max-width: $layout-breakpoint-991) {
+        .mobile-nav-toggle {
+            display: block;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}

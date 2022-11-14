@@ -1,0 +1,122 @@
+// Footer
+#footer {
+    background: url("../img/mountain.png") top center;
+    background-size: cover;
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0 10px 0;
+    position: relative;
+    color: $theme-white;
+
+    &:before {
+        content: "";
+        background: $theme-overlay-dark;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    h3 {
+        font-family: "Raleway", sans-serif;
+        padding: 0;
+        margin: 0 0 25px 0;
+    }
+
+    p {
+        font-style: italic;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    li {
+        margin-bottom: 1.3rem;
+
+        span {
+            padding: 1rem;
+        }
+    }
+
+    .social-links {
+        color: $theme-white;
+        display: inline-flex;
+        font-size: 1.1rem;
+
+        li {
+            a {
+                transition: border-radius 0.2s linear 0s;
+                transform: rotate(45deg);
+                text-decoration: none !important;
+                color: inherit;
+                line-height: 1;
+                padding: 15px;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                transition: 0.3s;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-right: 20px;
+                overflow: hidden;
+                position: relative;
+                border: 2px solid $theme-white;
+
+                i {
+                    display: inline-block;
+                    vertical-align: middle;
+                    transition: transform 0.01s linear 0s;
+                    transform: rotate(-45deg);
+                }
+
+                &:hover {
+                    border-radius: 0px;
+
+                    .fa-github,
+                    fa-codepen {
+                        color: $github-codepen-white;
+                    }
+
+                    .fa-twitter {
+                        color: $twitter-blue;
+                    }
+
+                    .fa-linkedin-in {
+                        color: $linkedIn-blue;
+                    }
+
+                    .fa-flickr {
+                        color: $flickr-blue;
+                    }
+
+                    .fa-trello {
+                        color: $trello-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.copyright {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.back-to-top {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s;
+    font-size: 1.8rem;
+    color: white;
+}

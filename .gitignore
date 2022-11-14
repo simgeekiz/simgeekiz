@@ -4,6 +4,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.bundle
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
