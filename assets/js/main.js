@@ -25,7 +25,7 @@
         });
     }
 
-    let streak = Math.floor(Math.abs(new Date() - new Date("2020-04-04")) / (1000 * 60 * 60 * 24));
+    let streak = Math.floor(Math.abs(new Date() - new Date("2020-04-06")) / (1000 * 60 * 60 * 24));
     console.log(document.getElementById('duo'));
     document.getElementById('duo').innerHTML = streak.toString();
 
